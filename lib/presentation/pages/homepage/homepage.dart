@@ -50,9 +50,7 @@ class Homepage extends StatelessWidget {
               ),
             ),
             20.ph,
-            Divider(
-              color: Color(0xFFF0F0F6)
-            ),
+            const Divider(color: Color(0xFFF0F0F6)),
             GridView.builder(
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -95,62 +93,88 @@ class Homepage extends StatelessWidget {
 
   Widget desktopView() {
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            decoration: const BoxDecoration(color: Colors.white),
-            child: Row(
+        backgroundColor: const Color.fromARGB(255, 229, 229, 229),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Align(
+            alignment: Alignment.center,
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Column(
-                  children: [
-                    SizedBox(
-                      width: 500,
-                      height: 500,
-                      child: Text.rich(
-                        TextSpan(
+                const SizedBox(
+                  height: 70,
+                ),
+                Container(
+                  width: 970,
+                  height: 467,
+                  color: const Color.fromARGB(255, 255, 254, 254),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 50.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            TextSpan(
-                              text: 'I’m Rayan Adlrdard',
-                              style: TextStyle(
-                                color: Color(0xFF2B2B2B),
-                                fontSize: 48,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w100,
-                                height: 0.03,
-                              ),
+                            const SizedBox(
+                              height: 20,
                             ),
-                            TextSpan(
-                              text: 'Front-end',
+                            const Text(
+                              "I’m Rayan Adlrdard",
                               style: TextStyle(
-                                color: Color(0xFFFFB400),
-                                fontSize: 48,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w100,
-                                height: 0.03,
-                              ),
+                                  fontSize: 40, fontWeight: FontWeight.w900),
                             ),
-                            TextSpan(
-                              text: ' Developer ',
+                            const Text(
+                              "Front-End Developer",
                               style: TextStyle(
-                                color: Color(0xFF2B2B2B),
-                                fontSize: 48,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w100,
-                                height: 0.03,
-                              ),
+                                  fontSize: 40,
+                                  fontWeight: FontWeight.w900,
+                                  color: Color.fromRGBO(255, 180, 0, 1)),
                             ),
+                            const Text(
+                              "lorem ipsum dolor sit amet, consectetur adipiscing\nipsum dolor sit amet lorem ipsum consectetur\nconsectetur adipiscing lorem adipiscing amit",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500, fontSize: 16),
+                            ),
+                            const SizedBox(
+                              height: 50,
+                            ),
+                            Container(
+                              height: 50,
+                              width: 150,
+                              decoration: BoxDecoration(
+                                color: const Color.fromRGBO(255, 180, 0, 1),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Center(
+                                  child: Text(
+                                "HIRE ME ->",
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.w600),
+                              )),
+                            )
                           ],
                         ),
                       ),
-                    )
-                  ],
+                      Image.asset('assets/images/person.png')
+                    ],
+                  ),
                 ),
-                Image.asset('assets/images/person.png')
+                //  my services text  and the box
+
+                const SizedBox(
+                  width: 970,
+                  height: 653,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                  ),
+                )
               ],
             ),
-          )
-        ],
-      ),
-    );
+          ),
+        ));
   }
 }
