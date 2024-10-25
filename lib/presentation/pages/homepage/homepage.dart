@@ -5,7 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:sample_portfolio/presentation/components/pricing_box.dart';
 import 'package:sample_portfolio/presentation/components/service_container.dart';
 import 'package:sample_portfolio/presentation/constants/constants.dart';
-import 'package:sample_portfolio/presentation/pages/homepage/core/config/assets/app_image.dart';
+import 'package:sample_portfolio/presentation/pages/homepage/core/config/app_image.dart';
 import 'package:sample_portfolio/presentation/pages/homepage/core/config/colors/colors.dart';
 import 'package:sample_portfolio/presentation/pages/homepage/core/config/helper_functions_ui/helper_functions_ui.dart';
 
@@ -131,6 +131,8 @@ class _HomepageState extends State<Homepage> {
                   Column(
                     children: [
                       90.ph,
+
+                      // todo-leftbox
                       Container(color: Colors.white, height: 1315, width: 200),
                     ],
                   ),
@@ -273,7 +275,8 @@ class _HomepageState extends State<Homepage> {
                     ],
                   ),
                   50.pw,
-                  //navigation bar
+                  //navigationbar
+                  // todo-rightbox
                   Column(
                     children: [
                       90.ph,
@@ -363,7 +366,7 @@ class _HomepageState extends State<Homepage> {
                   padding: const EdgeInsets.only(left: 90.0),
                   child: SizedBox(
                     // color: Colors.green,
-                    height: 1000,
+                    height: 650,
                     width: 970,
                     // color: Colors.blue,
                     child: Column(
@@ -494,16 +497,541 @@ class _HomepageState extends State<Homepage> {
                                       ),
                                     );
                                   },
-                                )
+                                ),
+                                60.ph,
+                                Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child:
+                                        Image(image: AssetImage(AppImage.dot)))
                               ],
                             ),
                           ),
                         ]),
                   )),
+
+              //education section
+
+              Padding(
+                  padding: const EdgeInsets.only(left: 90.0),
+                  child: SizedBox(
+                    // color: Colors.green,
+                    height: 970,
+                    width: 970,
+                    // color: Colors.blue,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text("Education",
+                              style: TextStyle(
+                                  fontSize: 32, fontWeight: FontWeight.w900)),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          const SizedBox(
+                            child: Column(
+                              children: [
+                                Text.rich(
+                                  TextSpan(
+                                    text:
+                                        'Amet minim mollit non deserunt ullamco est sit aliqua dolor\n',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text:
+                                            'Velit officia consequat duis enim velit mollit.\n',
+                                        style: TextStyle(
+                                            color: Colors.grey, fontSize: 16),
+                                      ),
+                                      TextSpan(
+                                        text: 'lorem ipsum',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign:
+                                      TextAlign.center, // Centers the text
+                                ),
+                              ],
+                            ),
+                          ),
+                          30.ph,
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 970,
+                            child: Column(children: [
+                              educationbox("University Of Toronto",
+                                  'Certificate Of Web Training'),
+                              const Divider(
+                                thickness:
+                                    1, // Change to 2 if thicker divider is required
+                                color: Colors.grey,
+                              ),
+                              //education 2
+                              15.ph,
+                              educationbox("GGSIPU",
+                                  "BTech Computer Science Engineering"),
+                              const Divider(
+                                thickness:
+                                    1, // Change to 2 if thicker divider is required
+                                color: Colors.grey,
+                              ),
+                              15.ph,
+                              educationbox("University Of Toronto",
+                                  'Certificate Of Web Training'),
+                            ]),
+                          )
+                        ]),
+                  )),
+              40.ph,
+              //work history
+
+              Padding(
+                  padding: const EdgeInsets.only(left: 90.0),
+                  child: SizedBox(
+                    // color: Colors.green,
+                    height: 970,
+                    width: 970,
+                    // color: Colors.blue,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text("Work History",
+                              style: TextStyle(
+                                  fontSize: 32, fontWeight: FontWeight.w900)),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          const SizedBox(
+                            child: Column(
+                              children: [
+                                Text.rich(
+                                  TextSpan(
+                                    text:
+                                        'Amet minim mollit non deserunt ullamco est sit aliqua dolor\n',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.grey,
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text:
+                                            'Velit officia consequat duis enim velit mollit.\n',
+                                        style: TextStyle(
+                                            color: Colors.grey, fontSize: 16),
+                                      ),
+                                      TextSpan(
+                                        text: 'lorem ipsum',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  textAlign:
+                                      TextAlign.center, // Centers the text
+                                ),
+                              ],
+                            ),
+                          ),
+                          30.ph,
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 970,
+                            child: Column(children: [
+                              educationbox("Junior Web Desingner",
+                                  'Certificate Of Web Training'),
+                              const Divider(
+                                thickness:
+                                    1, // Change to 2 if thicker divider is required
+                                color: Colors.grey,
+                              ),
+                              //education 2
+                              15.ph,
+                              educationbox("Junior Web Designer",
+                                  "Certificate Of Web Training"),
+                              const Divider(
+                                thickness:
+                                    1, // Change to 2 if thicker divider is required
+                                color: Colors.grey,
+                              ),
+                              15.ph,
+                              educationbox("Senior Web Designer",
+                                  'Certificate Of Web Training'),
+                            ]),
+                          )
+                        ]),
+                  )),
+              40.ph,
+              Padding(
+                padding: const EdgeInsets.only(left: 90.0),
+                child: SizedBox(
+                    // color: Colors.green,
+                    width: 970,
+                    height: 860,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              30.ph,
+                              const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Leave Us Your Info",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              40.ph,
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 40),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: 500,
+                                height: 640,
+                                child: Column(
+                                  children: [
+                                    const Align(
+                                      alignment: Alignment.center,
+                                      child: TextField(
+                                        maxLines: 2,
+                                        decoration: InputDecoration(
+                                          labelText:
+                                              "Your Full Name (Required)",
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 20),
+                                    const Align(
+                                      alignment: Alignment.center,
+                                      child: TextField(
+                                        maxLines: 2,
+                                        decoration: InputDecoration(
+                                          labelText:
+                                              "Your Full Name (Required)",
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 20),
+                                    const Align(
+                                      alignment: Alignment.center,
+                                      child: TextField(
+                                        maxLines: 2,
+                                        decoration: InputDecoration(
+                                          labelText:
+                                              "Your Full Name (Required)",
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 20),
+                                    const Align(
+                                      alignment: Alignment.center,
+                                      child: TextField(
+                                        maxLines: 2,
+                                        decoration: InputDecoration(
+                                          labelText:
+                                              "Your Full Name (Required)",
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 20),
+                                    Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Colors.amber,
+                                        ),
+                                        child: const Text("SEND MESSAGE"),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        //contact info sec
+                        50.pw,
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              30.ph,
+                              const Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  "Contact Information",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              40.ph,
+                              // Section 1: Location
+                              buildContactSection(
+                                icon: Icons.location_on,
+                                details: [
+                                  buildContactDetail('Country:', 'Bangladesh'),
+                                  buildContactDetail('City:', 'Dhaka'),
+                                  buildContactDetail(
+                                      'Street:', '35 Vhatara, Badda'),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+
+                              // Section 2: Communication
+                              buildContactSection(
+                                icon: Icons.email,
+                                details: [
+                                  buildContactDetail(
+                                      'Email:', 'Youremail@gmail.com'),
+                                  buildContactDetail('Skype:', '@Yourusername'),
+                                  buildContactDetail(
+                                      'Telegram:', '@Yourusername'),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+
+                              // Section 3: Phone numbers
+                              buildContactSection(
+                                icon: Icons.phone,
+                                details: [
+                                  buildContactDetail(
+                                      'Support Services:', '15369'),
+                                  buildContactDetail(
+                                      'Office:', '+58 (021) 356 587 235'),
+                                  buildContactDetail(
+                                      'Personal:', '+58 (021) 356 587 235'),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 70),
+                child: Container(
+                  width: 970,
+                  height: 290,
+                  decoration: BoxDecoration(
+                      // color: Colors.green,
+                      image: DecorationImage(
+                          fit: BoxFit.fill, image: AssetImage(AppImage.map))),
+                ),
+              ),
+              40.ph,
+              Padding(
+                padding: const EdgeInsets.only(left: 70),
+                child: Container(
+                  width: 970,
+                  height: 140,
+                  decoration: BoxDecoration(
+                      // color: Colors.green,
+                      image: DecorationImage(
+                          fit: BoxFit.fill, image: AssetImage(AppImage.logo1))),
+                ),
+              ),
+              35.ph,
+              Padding(
+                padding: const EdgeInsets.only(left: 70),
+                child: Container(
+                  width: 970,
+                  height: 60,
+                  color: Colors.white,
+                  child: const Center(
+                    child: Text(
+                      "2021 All Rights Reserved.Ojjomedia",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ),
+              ),
+              30.ph
             ],
           ),
         ),
       ),
     );
   }
+}
+
+///---------------------------------------------------------///
+
+Widget buildContactSection({
+  required IconData icon,
+  required List<Widget> details,
+}) {
+  return Container(
+    decoration: BoxDecoration(
+        color: Colors.white, borderRadius: BorderRadius.circular(20)),
+    width: 500,
+    height: 200,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        20.ph,
+        CircleAvatar(
+          backgroundColor: Colors.amber,
+          radius: 18,
+          child: Icon(icon, color: Colors.black, size: 30),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: details,
+        ),
+      ],
+    ),
+  );
+}
+
+Widget buildContactDetail(String label, String value) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 40),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+              color: Colors.grey[500],
+              fontWeight: FontWeight.bold,
+              fontSize: 18),
+        ),
+        const SizedBox(width: 5),
+        Text(
+          value,
+          style: TextStyle(
+              color: Colors.grey[500],
+              fontWeight: FontWeight.w500,
+              fontSize: 15),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget educationbox(
+  String name,
+  String certificate,
+) {
+  return Container(
+      width: 970,
+      color: Colors.white,
+      child: Column(children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 100.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  25.ph,
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  12.ph,
+                  Text(
+                    'Student',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ],
+              ),
+              // Date Box
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: const Text(
+                  'Jan 1016 - Dec 2021', // Update with correct dates
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        const SizedBox(height: 12), // Spacing before divider
+
+        // Divider
+
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 100.0),
+          child: Divider(
+            thickness: 1, // Change to 2 if thicker divider is required
+            color: Colors.grey,
+          ),
+        ),
+        const SizedBox(height: 12), // Spacing after divider
+
+        // Certificate Section
+        Text(
+          certificate,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(height: 8), // Spacing before description
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 130.0),
+          child: Text(
+            textAlign: TextAlign.center,
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+            'Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. '
+            'Pulvinar qulsque sed amet, nulla nunc. Eleifend sodales posuere '
+            'fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.',
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.grey[700],
+            ),
+          ),
+        ),
+        15.ph,
+      ]));
 }

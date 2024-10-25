@@ -24,6 +24,15 @@ class AppImage {
   static String p1 = getServiceName("p1.png");
   static String p2 = getServiceName("p2.png");
   static String p3 = getServiceName("p3.png");
+  static String dot = getServiceName("3dot.png");
+
+//education section iamges
+  static String date = getServiceName("date.png");
+  //bottom map
+  static String map = getServiceName("map.png");
+  //bottom logos
+  static String logo1 = getServiceName("logo1.png");
+  
 
   static String getServiceName(String name) => "$services$name";
 
@@ -39,5 +48,4 @@ class AppImage {
       "Handles Instagram,Facebook,Youtube"
     ],
   ];
- 
 }

@@ -1,4 +1,4 @@
-import '../pages/homepage/core/config/assets/app_image.dart';
+import '../pages/homepage/core/config/app_image.dart';
 
 class Constants {
   static List<List<List<String>>> pricelist = [
@@ -35,14 +35,25 @@ class Constants {
   ];
   static List<int> pop = [0, 1, 2];
   static List<List<String>> packages = [
-  ["Silver", "\$0.00", "For most businesses that want to optimize web queries"],
-  ["Gold", "\$50.00", "For most businesses that want to optimize web queries"],
-  ["Diamond", "\$80.00", "For most businesses that want to optimize web queries"],
-];
- static List<List<dynamic>> recclist = [
+    [
+      "Silver",
+      "\$0.00",
+      "For most businesses that want to optimize web queries"
+    ],
+    [
+      "Gold",
+      "\$50.00",
+      "For most businesses that want to optimize web queries"
+    ],
+    [
+      "Diamond",
+      "\$80.00",
+      "For most businesses that want to optimize web queries"
+    ],
+  ];
+  static List<List<dynamic>> recclist = [
     [AppImage.p1, "Great Quality!", "James Gouse", "Graphic Designer"],
     [AppImage.p2, "Amazing Work!", "Tiana Philips", "Photographer"],
     [AppImage.p3, "Great Quality!", "Talan Westervelt", "Buisness Man"],
   ];
-
 }
