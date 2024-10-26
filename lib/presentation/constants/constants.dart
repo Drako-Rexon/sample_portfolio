@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import '../pages/homepage/core/config/app_image.dart';
-=======
+
 import '../pages/homepage/core/config/assets/app_image.dart';
->>>>>>> 730c1692f04a0dd4ce490e1b2b8111358507174f
+
 
 class Constants {
   static List<List<List<String>>> pricelist = [
