@@ -50,9 +50,7 @@ class Homepage extends StatelessWidget {
               ),
             ),
             20.ph,
-            Divider(
-              color: Color(0xFFF0F0F6)
-            ),
+            const Divider(color: Color(0xFFF0F0F6)),
             GridView.builder(
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -71,23 +69,6 @@ class Homepage extends StatelessWidget {
               },
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Container socialIcon() {
-    return Container(
-      width: 30,
-      height: 30,
-      decoration: ShapeDecoration(
-        color: AppColor.primary,
-        shape: const OvalBorder(),
-      ),
-      child: Center(
-        child: Image.asset(
-          AppImage.facebook,
-          height: 20,
         ),
       ),
     );
@@ -150,6 +131,23 @@ class Homepage extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Container socialIcon() {
+    return Container(
+      width: 30,
+      height: 30,
+      decoration: ShapeDecoration(
+        color: AppColor.primary,
+        shape: const OvalBorder(),
+      ),
+      child: Center(
+        child: Image.asset(
+          AppImage.facebook,
+          height: 20,
+        ),
       ),
     );
   }
