@@ -868,7 +868,7 @@ class _HomepageState extends State<Homepage> {
                   color: Colors.white,
                   child: const Center(
                     child: Text(
-                      "2021 All Rights Reserved.Ojjomedia",
+                      "2024 All Rights Reserved. SyncSnip",
                       style: TextStyle(fontSize: 15),
                     ),
                   ),
