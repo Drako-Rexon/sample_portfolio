@@ -4,22 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:sample_portfolio/presentation/pages/homepage/core/config/helper_functions_ui/helper_functions_ui.dart';
 
 class PricingBox extends StatefulWidget {
-  PricingBox({
+  const PricingBox({
     super.key,
     required this.uplist,
     required this.pop,
     required this.pprice,
     required this.plist,
   });
-  // Color pcolor = const Color.fromRGBO(255, 160, 0, 1);
-  Container? widget;
-
   final String pprice;
-  // final String ptitle;
   final List<List<List<String>>> plist;
-
   final List<List<String>> uplist;
-  int pop;
+  final int pop;
 
   @override
   State<PricingBox> createState() => _PricingBoxState();
@@ -148,32 +143,4 @@ class _PricingBoxState extends State<PricingBox> {
       ),
     );
   }
-
-  // Widget listofService() {
-  //   return Column(
-  //     children: [
-  //       GridView.builder(
-  //           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-  //               crossAxisCount: 1, crossAxisSpacing: 3, mainAxisSpacing: 3),
-  //           itemCount: widget.plist.length,
-  //           itemBuilder: (
-  //             context,
-  //             i,
-  //           ) {
-  //             return Row(
-  //               // mainAxisAlignment: MainAxisAlignment.center,
-  //               children: [
-  //                 Image(
-  //                     height: 2,
-  //                     image: AssetImage(
-  //                       widget.plist[widget.pop][i][0],
-  //                     )),
-  //                 10.pw,
-  //                 Text(widget.plist[widget.pop][i][1])
-  //               ],
-  //             );
-  //           }),
-  //     ],
-  //   );
-  // }
 }

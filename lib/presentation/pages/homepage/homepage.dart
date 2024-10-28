@@ -17,18 +17,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  // List<List<String>> service = [
-  //   [AppImage.webdev, "Web Development", "blog, e-commerce"],
-  //   [AppImage.uiux, "UI/UX Design", "Mobile app, website design"],
-  //   [AppImage.mic, "Sound Design", "Voice Over, Beat Making"],
-  //   [AppImage.game, "Game Design", "Character Design, Props & Objects"],
-  //   [AppImage.photo, "Photography", "portrait, product photography"],
-  //   [
-  //     AppImage.social,
-  //     "Social Media\nHandling",
-  //     "Handles Instagram,Facebook,Youtube"
-  //   ],
-  // ];
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
@@ -116,7 +104,64 @@ class _HomepageState extends State<Homepage> {
                       90.ph,
 
                       // todo-leftbox
-                      Container(color: Colors.white, height: 1315, width: 200),
+
+                      Container(
+                        color: Colors.white,
+                        height: 1500,
+                        width: 200,
+                        child: Column(
+                          children: [
+                            60.ph,
+                            Center(
+                              child: CircleAvatar(
+                                radius: 100,
+                                backgroundImage:
+                                    Image.asset(AppImage.personMobile).image,
+                              ),
+                            ),
+                            20.ph,
+                            const Text(
+                              'Rayan Adlardard',
+                              style: TextStyle(
+                                color: Color(0xFF2B2B2B),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                height: 0.07,
+                              ),
+                            ),
+                            20.ph,
+                            const Text(
+                              'Font-end Developer',
+                              style: TextStyle(
+                                color: Color(0xFF767676),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                                height: 0.11,
+                              ),
+                            ),
+                            20.ph,
+                            const Divider(color: Color(0xFFF0F0F6)),
+                            GridView.builder(
+                              shrinkWrap: true,
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 5,
+                                crossAxisSpacing: 5.0,
+                                mainAxisSpacing: 5.0,
+                              ),
+                              itemBuilder: (BuildContext context, int index) {
+                                return socialIcon();
+                              },
+                            ),
+                            ListView.builder(
+                              itemCount: 4,
+                              itemBuilder: (BuildContext context, int index) {
+                                return socialIcon();
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                   50.pw,
@@ -947,9 +992,10 @@ Widget educationbox(
   String certificate,
 ) {
   return Container(
-      width: 970,
-      color: Colors.white,
-      child: Column(children: [
+    width: 970,
+    color: Colors.white,
+    child: Column(
+      children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 100.0),
           child: Row(
@@ -1033,5 +1079,7 @@ Widget educationbox(
           ),
         ),
         15.ph,
-      ]));
+      ],
+    ),
+  );
 }
